@@ -1,0 +1,20 @@
+Aihe: TKTL:lle luotava skaalautuva web-sivu. 
+
+TKTL:n verkkosivun tulee sisältää osiot “Etusivu”, “Opiskelu”, ja “Tutkimus”.
+Kun sivua käyttävän laitteen leveys on yli alle 600 pikseliä, tulee sivun
+elementit näyttää korkeussuunnassa. Muulloin sivu näytetään “normaalisti”
+leveyssuunassa. Sivun tulee siis skaalautua sitä käyttävälle laitteelle
+sopivaksi. 
+
+Sivun “Etusivu” tulee sisältää nykyisen etusivun sisältämän uutiset ja erillinen
+ajankohtaista-osio. Sivun “Opiskelu” tulee sisältää nykyisen opiskelusivun
+sisältämä “kurssit ja kokeet” osio sekä “opiskelun uutiset”.  Sivulla “Tutkimus”
+tulee olla lista tutkimusryhmistä. 
+
+Sivun ei tarvitse hakea dataa TKTL:n palvelimelta livenä, eikä kaikkien linkkien
+takana olevaa dataa tarvitse näyttää. Toteuta sivusi siten, että sivuun liittyvä
+JSON-muotoinen data (jonka joudut itse luomaan) on osa projektiasi. 
+
+Sivu tulee toteuttaa Backbone.js:ää käyttäen siten, että data renderöidään
+Mustache.js:n avulla. Toteuta skaalautuminen joko omilla tyylitiedostoillasi,
+tai käytä Twitter Bootstrappia. 
