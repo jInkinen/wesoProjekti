@@ -8,6 +8,8 @@ and open the template in the editor.
         <title id="title">Etusivu | Tietojenkäsittelytieteen laitos</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/header.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/footer.css"/>
     </head>
     <body>
         <header>
@@ -37,25 +39,71 @@ and open the template in the editor.
                     <img src="img/acquia_cshelsinkifi_logo.png" />
                     <ul>
                         <li><a href="#">Etusivu</a></li>
-                        <li><a href="#">Opiskelu</a></li>
                         <li><a href="#">Tutkimus</a></li>
+                        <li><a href="#">Opiskelu</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         
+        <!--
+        Varsinainen sivu
+        -->
         <section id="main">
             <!--
-            Varsinainen sivu
+            Etusivu
             -->
+            <section id="etusivu">
+                <section id="vasen">
+                    
+                </section>
+                <section id="keski">
+                    
+                    <div id="etusivu-keski-temp" class=".hidden">
+                    {{#artikkelit}}
+                        <article>
+                            <h1>{{otsikko}}</h1>
+                            {{#kappaleet}}
+                                <p>{{kappale}}</p>
+                            {{/kappaleet}}
+                        </article>
+                    {{/artikkeli}}
+                    </div>
+                </section>
+                <section id ="oikea">
+                    
+                </section>
+            </section>
             
+            <!--
+            Tutkimus
+            -->    
+            <section id="tutkimus">
+                
+            </section>
             
+            <!--
+            Opiskelu
+            -->
+            <section id="opiskelu">
+                
+            </section>
         </section>
         
+        <!--
+        Yhteystiedot
+        -->  
         <footer id="footer">
-            <!--
-            Yhteystiedot
-            -->  
+            Osoite: Tietojenkäsittelytieteen laitos, PL 68 (Gustaf Hällströmin katu 2b), 00014 Helsingin yliopisto<br/>
+            Aukioloajat: Normaalisti syys- ja kevätlukukausien aikana ma - pe klo 7.45-19.45.<br/>
+            Puhelin: (09) 1911 (yliopiston vaihde)<br/>
+            Sähköposti: Palveluosoitteet<br/>
+            Faksi: (09) 1915 1120
         </footer>
+        
+        <script src="js/libs/jquery-1.8.3.js"></script>
+        <script src="js/libs/mustache.js"></script>
+        <script src="js/libs/backbone-min.js"></script>
+        <script src="js/koodi.js"></script>
     </body>
 </html>
