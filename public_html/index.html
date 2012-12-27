@@ -105,13 +105,22 @@ and open the template in the editor.
                     </div>
                 </section>
 
+                <!-- RSS-syötteet, sekä niiden templaatit -->
                 <section id ="oikea" class="span3">
                     <section class="well">
-                        <h4>Ajankohtaista</h4>
+                        <h5><i class="icon-exclamation-sign"></i> Ajankohtaista</h5>
+                        <section id="ajankohtaista"></section>
                     </section>
                     
+                    <div id="etusivu-rss-temp" class="hidden">
+                        {{#items}}
+                        <p><a href="{{link}}">{{title}}</a></p>
+                        {{/items}}
+                    </div>
+                    
                     <section class="well">
-                        <h4>Päätapahtumat</h4>
+                        <h5><i class="icon-calendar"></i> Päätapahtumat</h5>
+                        <section id="paatapahtumat"></section>
                     </section>
                 </section>
             </section>
