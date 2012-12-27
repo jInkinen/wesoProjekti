@@ -7,45 +7,52 @@ and open the template in the editor.
     <head>
         <title id="title">Etusivu | Tietojenkäsittelytieteen laitos</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/header.css"/>
+
+        <link href="js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="js/libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+
+
+        <!--<link rel="stylesheet" type="text/css" href="css/header.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+        <link rel="stylesheet" type="text/css" href="css/footer.css"/>-->
     </head>
-    <body>
-        <header>
-            <section id="title">
-                <!--
-                Otsikot
-                -->
-                <h2>
-                    Helsingin Yliopisto<br />
-                    Matemaattis-luonnontieteellinen tiedekunta
-                </h2>
+    <body  class="container">
 
-                <h1>
-                    Tietojenkäsittelytieteen laitos
-                </h1>
 
-                <p>
-                    Tietojenkäsittelytieteen laitos vastaa tietojenkäsittelytieteen opetuksesta ja tutkimuksesta Helsingin yliopistossa.
-                </p>
-            </section>
-        
-            <section id="navi">
-                <!--
-                Navigaatiovalikko
-                -->
-                <nav>
-                    <img src="img/acquia_cshelsinkifi_logo.png" />
-                    <ul>
-                        <li><a href="#">Etusivu</a></li>
-                        <li><a href="#">Tutkimus</a></li>
-                        <li><a href="#">Opiskelu</a></li>
-                    </ul>
-                </nav>
-            </section>
-        </header>
-        
+
+        <section class="hero-unit">
+            <!--
+            Otsikot
+            -->
+            <img class="pull-left" src="img/acquia_cshelsinkifi_logo.png" />
+            <h3>
+                Helsingin Yliopisto<br />
+                Matemaattis-luonnontieteellinen tiedekunta
+            </h3>
+
+            <h2>
+                Tietojenkäsittelytieteen laitos
+            </h2>
+
+            <p>
+                Tietojenkäsittelytieteen laitos vastaa tietojenkäsittelytieteen opetuksesta ja tutkimuksesta Helsingin yliopistossa.
+            </p>
+        </section>
+
+        <section id="navi" class="navbar">
+            <!--
+            Navigaatiovalikko
+            -->
+            <nav class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="#"><i class="icon-home"></i> Etusivu</a></li>
+                    <li><a href="#">Tutkimus</a></li>
+                    <li><a href="#">Opiskelu</a></li>
+                </ul>
+            </nav>
+        </section>
+
+
         <!--
         Varsinainen sivu
         -->
@@ -53,55 +60,91 @@ and open the template in the editor.
             <!--
             Etusivu
             -->
-            <section id="etusivu">
-                <section id="vasen">
-                    
+            <section id="etusivu"  class="row">
+                <section id="vasen" class="span3">
+                    <section class="well">
+                        <h4>Laitoksen esittely</h4>
+                        <ul>
+                            <li><a href="#">Laitoksen historia</a></li>
+                            <li><a href="#">Laitos lukuina</a></li>
+                            <li><a href="#">Palkinnot ja arvioinnit</a></li>
+                            <li><a href="#">Vuosikertomus 2011</a></li>
+                            <li><a href="#">Avoimia työpaikkoja</a></li>
+                        </ul>
+                    </section>
+                    <section class="well">
+                        <h4>Blogit</h4>
+                        <p><a href="#">Shakkibotit kilpasilla – voittajan kommentit</a><br/>
+                            Teemu Roos</p>
+                        <p><a href="#">Busy Year for the Networking and Services and NODES Community</a><br/>
+                            The CS Blog Task Force</p>
+                    </section>
+                    <section class="well">
+                        <blockquote>
+                            <p>Paneeli on erittäin vaikuttunut laitoksen tutkimuksen fokuksesta ja syvyydestä, sen kyvystä yhdistää teoria ja sovellukset, sekä sen kansainvälisestä johtoasemasta monilla tärkeillä alueilla.</p>
+                            <small><a href="#">Suomen Akatemia: Computer Science Research in Finland 2000–2006: International Evaluation (Publication of the Academy of Finland 8/07), s. 44.</a></small>
+                        </blockquote>
+                        <blockquote>
+                            <p>Laitoksen opetusohjelma lepää selvästi erittäin vankalla pedagogisella pohjalla.</p>
+                            <small><a href="#">Korkeakoulujen arviointineuvosto: Centres of Excellence in Finnish University Education 2010–2012 (raportti 03:2009), s. 68.</a></small>
+                        </blockquote>
+                    </section>
+
                 </section>
-                <section id="keski">
-                    
+
+                <section id="keski" class="span6">
                     <div id="etusivu-keski-temp" class="hidden">
-                    {{#artikkelit}}
+                        {{#artikkelit}}
                         <article>
-                            <h1>{{otsikko}}</h1>
+                            <h2>{{otsikko}}</h2>
                             {{#kappaleet}}
-                                <p>{{kappale}}</p>
+                            <p>{{kappale}}</p>
                             {{/kappaleet}}
                         </article>
-                    {{/artikkelit}}
+                        {{/artikkelit}}
                     </div>
                 </section>
-                <section id ="oikea">
+
+                <section id ="oikea" class="span3">
+                    <section class="well">
+                        <h4>Ajankohtaista</h4>
+                    </section>
                     
+                    <section class="well">
+                        <h4>Päätapahtumat</h4>
+                    </section>
                 </section>
             </section>
-            
+
             <!--
             Tutkimus
             -->    
-            <section id="tutkimus">
-                
+            <section id="tutkimus" class="row">
+
             </section>
-            
+
             <!--
             Opiskelu
             -->
-            <section id="opiskelu">
-                
+            <section id="opiskelu" class="row">
+
             </section>
         </section>
-        
+
         <!--
         Yhteystiedot
-        -->  
-        <footer id="footer">
-            Osoite: Tietojenkäsittelytieteen laitos, PL 68 (Gustaf Hällströmin katu 2b), 00014 Helsingin yliopisto<br/>
-            Aukioloajat: Normaalisti syys- ja kevätlukukausien aikana ma - pe klo 7.45-19.45.<br/>
-            Puhelin: (09) 1911 (yliopiston vaihde)<br/>
-            Sähköposti: Palveluosoitteet<br/>
-            Faksi: (09) 1915 1120
+        -->
+        <hr/>
+        <footer id="footer" class="footer">
+            <p>Osoite: Tietojenkäsittelytieteen laitos, PL 68 (Gustaf Hällströmin katu 2b), 00014 Helsingin yliopisto</p>
+            <p>Aukioloajat: Normaalisti syys- ja kevätlukukausien aikana ma - pe klo 7.45-19.45.</p>
+            <p>Puhelin: (09) 1911 (yliopiston vaihde)</p>
+            <p>Sähköposti: Palveluosoitteet</p>
+            <p>Faksi: (09) 1915 1120</p>
         </footer>
-        
+
         <script src="js/libs/jquery-1.8.3.min.js"></script>
+        <script src="js/libs/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/libs/mustache.js"></script>
         <!--- <script src="js/libs/backbone-min.js"></script> -->
         <script src="js/koodi.js"></script>

@@ -1,6 +1,13 @@
+//Asetetaan sivujen käsittelyä varten eri sivuja kuvaavat muuttujat
+var etu = $("#etusivu");
+var tut = $("#tutkimus");
+var opi = $("#opiskelu");
+
 var data = {};
 
 $(document).ready(function() {
+    tut.hide();
+    opi.hide();
     haeJSON();
 });
 
