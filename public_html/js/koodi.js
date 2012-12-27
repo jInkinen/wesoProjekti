@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     haeJSON();
     haeRSS("http://www.cs.helsinki.fi/news/92/feed", etusivuAjankohtaistaFeed, 5);
-    haeRSS("http://www.cs.helsinki.fi/news/179/feed", etusivuPaatapahtumatFeed, 2);
+    haeRSS("http://www.cs.helsinki.fi/tapahtumat/179/feed", etusivuPaatapahtumatFeed, 2);
 });
 
 var haeJSON = function() {
@@ -33,7 +33,6 @@ var haeRSS = function(osoite, olio, maara) {
         var rss = $xml.find("item");
         
         for (var ind = 0; ind < maara; ind++) {
-            console.log(rss);
             rssData = {
                 title: rss.find("title")[ind].textContent,
                 link: rss.find("link")[ind].textContent
