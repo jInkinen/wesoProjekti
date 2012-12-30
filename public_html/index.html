@@ -45,9 +45,9 @@ and open the template in the editor.
             -->
             <nav class="navbar-inner">
                 <ul class="nav">
-                    <li><a href="#"><i class="icon-home"></i> Etusivu</a></li>
-                    <li><a href="#">Tutkimus</a></li>
-                    <li><a href="#">Opiskelu</a></li>
+                    <li><a id="0" href="#"><i class="icon-home"></i> Etusivu</a></li>
+                    <li><a id="1" href="#">Tutkimus</a></li>
+                    <li><a id="2" href="#">Opiskelu</a></li>
                 </ul>
             </nav>
         </section>
@@ -111,13 +111,13 @@ and open the template in the editor.
                         <h5><i class="icon-exclamation-sign"></i> Ajankohtaista</h5>
                         <section id="ajankohtaista"></section>
                     </section>
-                    
+
                     <div id="etusivu-rss-temp" class="hidden">
                         {{#items}}
                         <p><a href="{{link}}">{{title}}</a></p>
                         {{/items}}
                     </div>
-                    
+
                     <section class="well">
                         <h5><i class="icon-calendar"></i> Päätapahtumat</h5>
                         <section id="paatapahtumat"></section>
@@ -128,7 +128,43 @@ and open the template in the editor.
             <!--
             Tutkimus
             -->    
-            <section id="tutkimus" class="row">
+            <section id="tutkimus">
+                <h2>Tutkimus</h2>
+                <hr/>
+                Poimintoja sivulta:<br/><br/>
+                <article class="row">
+                    <div class="span3">
+                        <a href="#">Professorit
+                        <img src="http://www.cs.helsinki.fi/sites/default/files/root/hallinto/kuvia/professorit2.jpg"></a>
+                        Laitoksella työskentelee toistakymmentä professoria.
+                    </div>
+                    <div class="span3">
+                        <a href="#">Dosentit
+                        <img src="http://www.cs.helsinki.fi/sites/default/files/root/hallinto/kuvia/dosentit.png"></a>
+                    </div>
+                    <div class="span3">
+                        <a href="#">Tietotekniikan tutkimuslaitos HIIT
+                        <img src="https://www.cs.helsinki.fi/sites/default/files/hiit_logo_withtext_rgb.png"></a>
+                        HIIT harjoittaa tietojenkäsittelytieteen laitoksella tietotekniikan perus- ja strategista tutkimusta.
+                    </div>
+                    <div class="span3">
+                        <a href="#">Centre of Excellence Algorithmic Data Analysis
+                        <img src="https://www.cs.helsinki.fi/sites/default/files/pictures/algodan4.gif"></a>
+                        Algodan, Suomen Akatemian kansallinen huippuyksikkö tietojenkäsittelytieteen laitoksella.
+                    </div>
+                </article>
+                <article class="row">
+                    <div class="span4">
+                        <section class="well">
+                            Laitoksen järjestämiä tieteellisiä tapahtumia
+                        </section>
+                    </div>
+                    <div class="span8">
+                        <h4>Tutkimusyksiköt ja -verkostot</h4>
+                        asdasdasd
+                        <h4>Vastuulliset tutkijat ja tutkimusryhmät</h4>
+                    </div>
+                </article>
 
             </section>
 
