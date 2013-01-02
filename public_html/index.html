@@ -1,7 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,11 +6,6 @@ and open the template in the editor.
 
         <link href="js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="js/libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-
-
-        <!--<link rel="stylesheet" type="text/css" href="css/header.css"/>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="css/footer.css"/>-->
     </head>
     <body  class="container">
 
@@ -54,13 +45,16 @@ and open the template in the editor.
 
 
         <!--
-        Varsinainen sivu
+        Sisältö
         -->
         <section id="main">
             <!--
             Etusivu
             -->
             <section id="etusivu"  class="row">
+                <!--
+                Etusivun vasen palkki
+                -->
                 <section id="vasen" class="span3">
                     <section class="well">
                         <h4>Laitoksen esittely</h4>
@@ -92,6 +86,9 @@ and open the template in the editor.
 
                 </section>
 
+                <!--
+                Etusivun keskialue
+                -->
                 <section id="keski" class="span6">
                     <div id="etusivu-keski-temp" class="hidden">
                         {{#artikkelit}}
@@ -107,7 +104,9 @@ and open the template in the editor.
                     </div>
                 </section>
 
-                <!-- RSS-syötteet, sekä niiden templaatit -->
+                <!--
+                Etusivun RSS-syötteet, sekä niiden templaatit
+                -->
                 <section id ="oikea" class="span3">
                     <section class="well">
                         <h5><i class="icon-exclamation-sign"></i> Ajankohtaista</h5>
@@ -231,7 +230,16 @@ and open the template in the editor.
             Opiskelu
             -->
             <section id="opiskelu" class="row">
-
+                <div class="span8">
+                    
+                </div>
+                
+                <div class="span4">
+                    <section class="well">
+                        <h5><i class="icon-exclamation-sign"></i> Opiskelun uutiset</h5>
+                        <section id="opuutiset"></section>
+                    </section>
+                </div>
             </section>
         </section>
 

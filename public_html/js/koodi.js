@@ -10,6 +10,7 @@ sivut.push(opi);
 var etusivuPaauutiset = {};
 var etusivuAjankohtaistaFeed = {items: [], luokka: "#ajankohtaista"};
 var etusivuPaatapahtumatFeed = {items: [], luokka: "#paatapahtumat"};
+var opiskeluUutisetFeed = {items: [], luokka: "#opuutiset"};
 
 $(document).ready(function() {
     addListeners();
@@ -18,6 +19,7 @@ $(document).ready(function() {
     haeJSON();
     haeRSS("http://www.cs.helsinki.fi/news/92/feed", etusivuAjankohtaistaFeed, 5);
     haeRSS("http://www.cs.helsinki.fi/tapahtumat/179/feed", etusivuPaatapahtumatFeed, 2);
+    haeRSS("http://www.cs.helsinki.fi/news/94/feed", opiskeluUutisetFeed, 5);
 });
 
 var haeJSON = function() {
