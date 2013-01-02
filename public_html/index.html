@@ -97,9 +97,11 @@ and open the template in the editor.
                         {{#artikkelit}}
                         <article>
                             <h2>{{otsikko}}</h2>
+                            <img src={{imgsrc}}>
                             {{#kappaleet}}
                             <p>{{kappale}}</p>
                             {{/kappaleet}}
+                            <a href={{lisaaurl}}>Lue lisää</a>
                         </article>
                         {{/artikkelit}}
                     </div>
