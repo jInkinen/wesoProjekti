@@ -1,0 +1,153 @@
+{
+    "yksikot":
+            [
+                {
+                    "nimi": "Algorithmic Data Analysis Centre-of-Excellence (Algodan)",
+                    "url": "http://www.cs.helsinki.fi/tutkimus/algorithmic-data-analysis-centre-excellence-algodan"
+                },
+                {
+                    "nimi": "Helsinki Institute for Information Technology HIIT",
+                    "url": "http://www.cs.helsinki.fi/tutkimus/helsinki-institute-information-technology-hiit"
+                },
+                {
+                    "nimi": "Networking in Open Distributed Environments (NODES)",
+                    "url": "http://www.cs.helsinki.fi/tutkimus/networking-open-distributed-environments-nodes"
+                }
+            ],
+    "tutkijat":
+            [
+                {
+                    "nimi": "Floréen, P.",
+                    "kohde": "Adaptive Computing",
+                    "url1": "http://www.cs.helsinki.fi/en/research/adaptive-computing",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/adaptive-computing"
+                },
+                {
+                    "nimi": "Hyvärinen, A.",
+                    "kohde": "Neuroinformatics",
+                    "url1": "http://www.cs.helsinki.fi/en/research/neuroinformatics",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/neuroinformatics"
+                },
+                {
+                    "nimi": "Hyvönen, E.",
+                    "kohde": "Semantic Computing Research Group (SeCo)",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/semantic-computing-research-group-seco",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/semantic-computing-research-group-seco"
+                },
+                {
+                    "nimi": "Jacucci, G.",
+                    "kohde": "Interactive Systems",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/interactive-systems",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/interactive-systems"
+                },
+                {
+                    "nimi": "Kangasharju, J.",
+                    "kohde": "Collaborative Networking (CoNe)",
+                    "url1": "http://www.cs.helsinki.fi/en/research/collaborative-networking-cone",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/collaborative-networking-cone"
+                },
+                {
+                    "nimi": "Kivinen, J.",
+                    "kohde": "Machine Learning",
+                    "url1": "http://www.cs.helsinki.fi/en/research/machine-learning",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/machine-learning"
+                },
+                {
+                    "nimi": "Koivisto, M.",
+                    "kohde": "Sums of Products",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/sums-products",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/sums-products"
+                },
+                {
+                    "nimi": "Kojo, M.",
+                    "kohde": "Wireless Internet (WInt)",
+                    "url1": "http://www.cs.helsinki.fi/en/research/wireless-internet-wint",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/wireless-internet-wint"
+                },
+                {
+                    "nimi": "Kurhila, J.",
+                    "kohde": "RAGE - Agile Education Research",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/rage-agile-education-research",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/rage-agile-education-research"
+                },
+                {
+                    "nimi": "Kutvonen, L.",
+                    "kohde": "Collaborative and Interoperable Computing (Cinco)",
+                    "url1": "http://www.cs.helsinki.fi/en/research/collaborative-and-interoperable-computing-cinco",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/collaborative-and-interoperable-computing-cinco"
+                },
+                {
+                    "nimi": "Lemström, K.",
+                    "kohde": "Computer-Assisted Music Analysis, Comparison and Retrieval",
+                    "url1": "http://www.cs.helsinki.fi/en/research/computer-assisted-music-analysis-comparison-and-retrieval",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/computer-assisted-music-analysis-comparison-and-retrieval"
+                },
+                {
+                    "nimi": "Mäkinen, V.",
+                    "kohde": "Genome-scale Algorithmics",
+                    "url1": "http://www.cs.helsinki.fi/en/research/genome-scale-algorithmics",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/genome-scale-algorithmics"
+                },
+                {
+                    "nimi": "Mannila, H.",
+                    "kohde": "Data mining: Theory and Applications",
+                    "url1": "http://www.cs.helsinki.fi/en/research/data-mining-theory-and-applications",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/data-mining-theory-and-applications"
+                },
+                {
+                    "nimi": "Münch, J.",
+                    "kohde": "Software Factory",
+                    "url1": "http://www.cs.helsinki.fi/en/research/software-factory",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/software-factory"
+                },
+                {
+                    "nimi": "Münch, J.",
+                    "kohde": "Software Systems Engineering",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/software-systems-engineering",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/software-systems-engineering"
+                },
+                {
+                    "nimi": "Myllymäki, P.",
+                    "kohde": "Complex Systems Computation (CoSCo)",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/complex-systems-computation-cosco",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/complex-systems-computation-cosco"
+                },
+                {
+                    "nimi": "Pasanen, T.",
+                    "kohde": "Gamics Laboratory",
+                    "url1": "http://www.cs.helsinki.fi/en/research/gamics-laboratory",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/gamics-laboratory"
+                },
+                {
+                    "nimi": "Rousu, J.",
+                    "kohde": "Kernel Machines, Pattern Analysis and Computational Biology",
+                    "url1": "http://www.cs.helsinki.fi/en/research/kernel-machines-pattern-analysis-and-computational-biology",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/kernel-machines-pattern-analysis-and-computational-biology"
+                },
+                {
+                    "nimi": "Tarkoma, S.",
+                    "kohde": "Content-centric structures and networking (COSN)",
+                    "url1": "http://www.cs.helsinki.fi/tutkimus/content-centric-structures-and-networking-cosn",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/content-centric-structures-and-networking-cosn"
+                },
+                {
+                    "nimi": "Toivonen, H.",
+                    "kohde": "Discovery group: Data Mining and Computational Creativity",
+                    "url1": "http://www.cs.helsinki.fi/en/research/discovery-group-data-mining-and-computational-creativity",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/discovery-group-data-mining-and-computational-creativity"
+                },
+                {
+                    "nimi": "Ukkonen, E.",
+                    "kohde": "Combinatorial Pattern Matching",
+                    "url1": "http://www.cs.helsinki.fi/en/research/combinatorial-pattern-matching",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/combinatorial-pattern-matching"
+                },
+                {
+                    "nimi": "Yangarber, R.",
+                    "kohde": "Computational Linguistics",
+                    "url1": "http://www.cs.helsinki.fi/en/research/computational-linguistics",
+                    "url2": "http://www.cs.helsinki.fi/tutkimus/computational-linguistics"
+                }
+
+            ]
+}

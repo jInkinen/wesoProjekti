@@ -94,11 +94,11 @@
                         {{#artikkelit}}
                         <article>
                             <h2>{{otsikko}}</h2>
-                            <img src={{imgsrc}}>
+                            <img src="{{imgsrc}}">
                             {{#kappaleet}}
                             <p>{{kappale}}</p>
                             {{/kappaleet}}
-                            <a href={{lisaaurl}}>Lue lisää</a>
+                            <a href="{{lisaaurl}}">Lue lisää</a>
                         </article>
                         {{/artikkelit}}
                     </div>
@@ -136,21 +136,21 @@
                 <article class="row">
                     <div class="span3">
                         <a href="#">Professorit
-                        <img src="http://www.cs.helsinki.fi/sites/default/files/root/hallinto/kuvia/professorit2.jpg"></a>
+                            <img src="http://www.cs.helsinki.fi/sites/default/files/root/hallinto/kuvia/professorit2.jpg"></a>
                         Laitoksella työskentelee toistakymmentä professoria.
                     </div>
                     <div class="span3">
                         <a href="#">Dosentit
-                        <img src="http://www.cs.helsinki.fi/sites/default/files/root/hallinto/kuvia/dosentit.png"></a>
+                            <img src="http://www.cs.helsinki.fi/sites/default/files/root/hallinto/kuvia/dosentit.png"></a>
                     </div>
                     <div class="span3">
                         <a href="#">Tietotekniikan tutkimuslaitos HIIT
-                        <img src="https://www.cs.helsinki.fi/sites/default/files/hiit_logo_withtext_rgb.png"></a>
+                            <img src="https://www.cs.helsinki.fi/sites/default/files/hiit_logo_withtext_rgb.png"></a>
                         HIIT harjoittaa tietojenkäsittelytieteen laitoksella tietotekniikan perus- ja strategista tutkimusta.
                     </div>
                     <div class="span3">
                         <a href="#">Centre of Excellence Algorithmic Data Analysis
-                        <img src="https://www.cs.helsinki.fi/sites/default/files/pictures/algodan4.gif"></a>
+                            <img src="https://www.cs.helsinki.fi/sites/default/files/pictures/algodan4.gif"></a>
                         Algodan, Suomen Akatemian kansallinen huippuyksikkö tietojenkäsittelytieteen laitoksella.
                     </div>
                 </article>
@@ -168,7 +168,7 @@
                             <a href="#"><img src="http://www.helsinki.fi/pgm2010/images/pgm2010_logo.png"></a><br><br>
                             <a href="#"><img src="http://www.cs.helsinki.fi/u/mqheinon/msib.png"></a><br><br>
                         </section>
-                        
+
                         <section class="well">
                             <blockquote>
                                 Tutkimuksessa painotetaan kaudella 2010-12 seuraavia aloja:
@@ -181,49 +181,33 @@
                             </blockquote>
                             <a href="http://www.cs.helsinki.fi/node/910/">Laitoksen toimintasuunnitelma 2010-2012</a>
                         </section>
-                        
+
                         <section class="well">
                             <h5>Tie tutkijaksi</h5>
                             <p>Tietojenkäsittelytieteen jatko-opintojen tavoitteena on hankkia syvällinen perehtyneisyys johonkin tietojenkäsittelytieteen erikoisalaan ja saavuttaa siinä valmius luoda uutta tieteellistä tietoa. Jatko-opinnot aloitetaan normaalisti FM-tutkinnon pohjalta, usein pro gradu -tutkielman aihepiiristä. Suuri osa jatko-opiskelijoista kuuluu ns. tutkijakouluihin.</p>
                             <a href="http://www.cs.helsinki.fi/opiskelu/phd/jatko-opinnot">Lue lisää</a>
                         </section>
+
+                    </div>
+                    <div class="span8" id="tutkimus-sisus">
                         
                     </div>
-                    <div class="span8">
+                    <div class="hidden" id="tutkimus-sisus-temp">
                         <h4>Tutkimusyksiköt ja -verkostot</h4>
                         <ul>
-                            <li><a href="#">Algorithmic Data Analysis Centre-of-Excellence (Algodan)</a></li>
-                            <li><a href="#">Helsinki Institute for Information Technology HIIT</a></li>
-                            <li><a href="#">Networking in Open Distributed Environments (NODES)</a></li>
+                            {{#yksikot}}
+                            <li><a href="{{url}}">{{nimi}}</a></li>
+                            {{/yksikot}}
                         </ul>
                         <h4>Vastuulliset tutkijat ja tutkimusryhmät</h4>
                         <ul>
-                            <li><a href="#">Floréen, P  - Adaptive Computing</a></li>
-                            <li><a href="#">Hyvärinen, A.  - Neuroinformatics</a></li>
-                            <li><a href="#">Hyvönen, E.  - Semantic Computing Research Group (SeCo)</a></li>
-                            <li><a href="#">Jacucci, G.  - Interactive Systems</a></li>
-                            <li><a href="#">Kangasharju, J.  - Collaborative Networking (CoNe)</a></li>
-                            <li><a href="#">Kivinen, J.  - Machine Learning</a></li>
-                            <li><a href="#">Koivisto, M.  - Sums of Products</a></li>
-                            <li><a href="#">Kojo, M.  - Wireless Internet (WInt)</a></li>
-                            <li><a href="#">Kurhila, J.  - RAGE - Agile Education Research</a></li>
-                            <li><a href="#">Kutvonen, L  - Collaborative and Interoperable Computing (Cinco)</a></li>
-                            <li><a href="#">Lemström, K.  - Computer-Assisted Music Analysis, Comparison and Retrieval</a></li>
-                            <li><a href="#">Mäkinen, V.  - Genome-scale Algorithmics</a></li>
-                            <li><a href="#">Mannila, H.  - Data mining: Theory and Applications</a></li>
-                            <li><a href="#">Münch, J.  - Software Factory</a></li>
-                            <li><a href="#">Münch, J.  - Software Systems Engineering</a></li>
-                            <li><a href="#">Myllymäki, P.  - Complex Systems Computation (CoSCo)</a></li>
-                            <li><a href="#">Pasanen, T.  - Gamics Laboratory</a></li>
-                            <li><a href="#">Rousu, J.  - Kernel Machines, Pattern Analysis and Computational Biology</a></li>
-                            <li><a href="#">Tarkoma, S.  - Content-centric structures and networking (COSN)</a></li>
-                            <li><a href="#">Toivonen, H.  - Discovery group: Data Mining and Computational Creativity</a></li>
-                            <li><a href="#">Ukkonen, E.  - Combinatorial Pattern Matching</a></li>
-                            <li><a href="#">Yangarber, R.  - Computational Linguistics</a></li>
+                            {{#tutkijat}}
+                            <li><a href="{{url1}}">{{nimi}}</a> - <b><a href="{{url2}}">{{kohde}}</a></b></li>
+                            {{/tutkijat}}
                         </ul>
                     </div>
                 </article>
-
+                
             </section>
 
             <!--
@@ -231,9 +215,9 @@
             -->
             <section id="opiskelu" class="row">
                 <div class="span8">
-                    
+
                 </div>
-                
+
                 <div class="span4">
                     <section class="well">
                         <h5><i class="icon-exclamation-sign"></i> Opiskelun uutiset</h5>

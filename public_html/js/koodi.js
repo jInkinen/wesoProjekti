@@ -8,6 +8,8 @@ var opi = $("#opiskelu");
 sivut.push(opi);
 
 var etusivuPaauutiset = {};
+var tutkimusRyhmat = {};
+
 var etusivuAjankohtaistaFeed = {items: [], luokka: "#ajankohtaista"};
 var etusivuPaatapahtumatFeed = {items: [], luokka: "#paatapahtumat"};
 var opiskeluUutisetFeed = {items: [], luokka: "#opuutiset"};
@@ -16,19 +18,20 @@ $(document).ready(function() {
     addListeners();
     show(0);
 
-    haeJSON();
+    haeJSON("data/newsfeed.json", etusivuPaauutiset, "#keski", "#etusivu-keski-temp");
+    haeJSON("data/tutkimus.json", tutkimusRyhmat, "#tutkimus-sisus", "#tutkimus-sisus-temp");
+    
     haeRSS("http://www.cs.helsinki.fi/news/92/feed", etusivuAjankohtaistaFeed, 5);
     haeRSS("http://www.cs.helsinki.fi/tapahtumat/179/feed", etusivuPaatapahtumatFeed, 2);
     haeRSS("http://www.cs.helsinki.fi/news/94/feed", opiskeluUutisetFeed, 5);
 });
 
-var haeJSON = function() {
-    $.getJSON("data/newsfeed.json",
+var haeJSON = function(kohde, olio, renderKohde, renderTemp) {
+    $.getJSON(kohde,
             "",
             function(dta) {
-                etusivuPaauutiset = dta;
-                //console.log(data);
-                render("#keski", "#etusivu-keski-temp", etusivuPaauutiset);
+                olio = dta;
+                render(renderKohde, renderTemp, olio);
             });
 };
 
