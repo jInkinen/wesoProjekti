@@ -1,3 +1,44 @@
+"use strict";
+
+var site = {
+    view: {},
+    model: {}
+};
+
+site.view.Sivu = Backbone.View.extend({
+    initialize: function(kohde, temp) {
+        this.render(kohde, temp);
+    },
+    render: function(kohde, temp) {       
+        var html = Mustache.render($(temp).html(), this.model);
+        $(kohde).html(html);
+    }
+});
+
+site.model.Feed = Backbone.Model.extend({
+    initialize: function(url) {
+       console.log(url);
+    }
+});
+
+site.model.Data = Backbone.Model.extend({
+    initialize: function(url) {
+        this.url = url;
+        console.log(url);
+    }
+});
+
+
+$(document).ready(function() {
+    var etuSivu = new site.view.Sivu({
+        $el: "#0",
+        model: new site.model.Data("asd")
+    });
+console.log(etuSivu);
+});
+
+
+/*
 //Asetetaan sivujen käsittelyä varten eri sivuja kuvaavat muuttujat
 var sivut = [];
 var etu = $("#etusivu");
@@ -76,4 +117,4 @@ var addListeners = function() {
     $("#navi a").click(function() {
         show(this.id);
     });
-};
+};*/
