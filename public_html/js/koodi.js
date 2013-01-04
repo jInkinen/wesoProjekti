@@ -14,6 +14,11 @@ var etusivuAjankohtaistaFeed = {items: [], luokka: "#ajankohtaista"};
 var etusivuPaatapahtumatFeed = {items: [], luokka: "#paatapahtumat"};
 var opiskeluUutisetFeed = {items: [], luokka: "#opuutiset"};
 
+var Sivu = Backbone.Model.extend();
+
+
+
+
 $(document).ready(function() {
     addListeners();
     show(0);
