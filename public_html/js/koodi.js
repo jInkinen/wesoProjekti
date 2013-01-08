@@ -32,34 +32,55 @@ site.view.Etusivu = Backbone.View.extend({
 site.view.RSS1 = Backbone.View.extend({
     initialize: function() {
         this.model = new site.model.RSS1();
-        this.model.bind("reset", this.render, this);
         this.model.bind("change", this.render, this);
+        this.model.lataaSyote("http://www.cs.helsinki.fi/news/92/feed", 3);
     },
     render: function() {
-        var html = Mustache.render($("#etusivu-rss-temp").html(), this.collection.models[0].attributes);
+        console.log(this.model);
+        var html = Mustache.render($("#etusivu-rss-temp").html(), this.model.attributes);
         $("#ajankohtaista").html(html);
+    }
+});
+
+site.view.RSS2 = Backbone.View.extend({
+    initialize: function() {
+        this.model = new site.model.RSS1();
+        this.model.bind("change", this.render, this);
+        this.model.lataaSyote("http://www.cs.helsinki.fi/tapahtumat/179/feed", 2);
+    },
+    render: function() {
+        console.log(this.model);
+        var html = Mustache.render($("#etusivu-rss-temp").html(), this.model.attributes);
+        $("#paatapahtumat").html(html);
     }
 });
 
 site.model.RSS1 = Backbone.Model.extend({
     initialize: function() {
         this.set({"items": []});
-        this.lataaSyote();
     },
-    lataaSyote: function() {
+    lataaSyote: function(osoite, maara) {
         var rssData = {};
-        
-        $.get("http://www.cs.helsinki.fi/news/92/feed", function(data) {
+        var isanta = this;
+        $.get(osoite, function(data) {
             var $xml = $(data);
             var rss = $xml.find("item");
-            for (var ind = 0; ind < 3; ind++) {
+            for (var ind = 0; ind < maara; ind++) {
                 rssData = {
                     title: rss.find("title")[ind].textContent,
                     link: rss.find("link")[ind].textContent
                 };
-                
+                //this tässä kontekstissa viittaa jQuery.get-kyselyyn
+                isanta.tallenna(rssData);
             }
         });
+    },
+    tallenna: function(uusiData) {
+        var data = this.get("items");
+        data.push(uusiData);
+        this.set({"items": data});
+        //Laukaistaan change, jotta view päivittää renderöidyn sivun
+        this.trigger('change',this);
     }
 });
 
@@ -71,8 +92,9 @@ site.model.Uutiset = Backbone.Collection.extend({
 });
 
 $(document).ready(function() {
-    new site.view.RSS1();
     var etu = new site.view.Etusivu();
+    new site.view.RSS1();
+    new site.view.RSS2();
     etu.show();
 });
 
@@ -86,26 +108,6 @@ $(document).ready(function() {
  haeRSS("http://www.cs.helsinki.fi/news/92/feed", etusivuAjankohtaistaFeed, 5);
  haeRSS("http://www.cs.helsinki.fi/tapahtumat/179/feed", etusivuPaatapahtumatFeed, 2);
  haeRSS("http://www.cs.helsinki.fi/news/94/feed", opiskeluUutisetFeed, 5);
- 
- 
- var haeRSS = function(osoite, olio, maara) {
- $.get(osoite, function(data) {
- var $xml = $(data);
- 
- var rss = $xml.find("item");
- 
- for (var ind = 0; ind < maara; ind++) {
- rssData = {
- title: rss.find("title")[ind].textContent,
- link: rss.find("link")[ind].textContent
- };
- 
- olio["items"].push(rssData);
- }
- //console.log(olio);
- render(olio["luokka"], "#etusivu-rss-temp", olio);
- });
- };
  
  var render = function(kohde, temp, data) {
  var html = Mustache.render($(temp).html(), data);
