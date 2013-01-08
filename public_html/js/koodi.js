@@ -29,33 +29,81 @@ site.view.Etusivu = Backbone.View.extend({
     }
 });
 
-site.view.RSS1 = Backbone.View.extend({
+site.view.Tutkimus = Backbone.View.extend({
+    el: $("#1"),
     initialize: function() {
-        this.model = new site.model.RSS1();
+        this.collection = new site.model.Tutkijat();
+        this.collection.bind("reset", this.render, this);
+        this.collection.bind("change", this.render, this);
+        this.collection.fetch();
+    },
+    render: function() {
+        var html = Mustache.render($("#tutkimus-sisus-temp").html(), this.collection.models[0].attributes);
+        $("#tutkimus-sisus").html(html);
+    },
+    show: function() {
+        $("#etusivu").hide();
+        $("#tutkimus").show();
+        $("#opiskelu").hide();
+    },
+    events: {
+        "click": function() {
+            this.show();
+        }
+    }
+});
+
+site.view.Opiskelu = Backbone.View.extend({
+    el: $("#2"),
+    show: function() {
+        $("#etusivu").hide();
+        $("#tutkimus").hide();
+        $("#opiskelu").show();
+    },
+    events: {
+        "click": function() {
+            this.show();
+        }
+    }
+});
+
+site.view.RSSajankohtaista = Backbone.View.extend({
+    initialize: function() {
+        this.model = new site.model.RSS();
         this.model.bind("change", this.render, this);
         this.model.lataaSyote("http://www.cs.helsinki.fi/news/92/feed", 3);
     },
     render: function() {
-        console.log(this.model);
         var html = Mustache.render($("#etusivu-rss-temp").html(), this.model.attributes);
         $("#ajankohtaista").html(html);
     }
 });
 
-site.view.RSS2 = Backbone.View.extend({
+site.view.RSSpaatapahtumat = Backbone.View.extend({
     initialize: function() {
-        this.model = new site.model.RSS1();
+        this.model = new site.model.RSS();
         this.model.bind("change", this.render, this);
         this.model.lataaSyote("http://www.cs.helsinki.fi/tapahtumat/179/feed", 2);
     },
     render: function() {
-        console.log(this.model);
         var html = Mustache.render($("#etusivu-rss-temp").html(), this.model.attributes);
         $("#paatapahtumat").html(html);
     }
 });
 
-site.model.RSS1 = Backbone.Model.extend({
+site.view.RSSopiskelu = Backbone.View.extend({
+    initialize: function() {
+        this.model = new site.model.RSS();
+        this.model.bind("change", this.render, this);
+        this.model.lataaSyote("http://www.cs.helsinki.fi/news/94/feed", 4);
+    },
+    render: function() {
+        var html = Mustache.render($("#etusivu-rss-temp").html(), this.model.attributes);
+        $("#opuutiset").html(html);
+    }
+});
+
+site.model.RSS = Backbone.Model.extend({
     initialize: function() {
         this.set({"items": []});
     },
@@ -91,10 +139,23 @@ site.model.Uutiset = Backbone.Collection.extend({
     url: "data/newsfeed.json"
 });
 
+site.model.Tutkijat = Backbone.Collection.extend({
+    model: site.model.Artikkeli,
+    url: "data/tutkimus.json"
+});
+
+//Dokumentin alustus
 $(document).ready(function() {
+    //Etusivun osat
     var etu = new site.view.Etusivu();
-    new site.view.RSS1();
-    new site.view.RSS2();
+    new site.view.RSSajankohtaista();
+    new site.view.RSSpaatapahtumat();
+    //Tutkimus-sivun osat
+    new site.view.Tutkimus();
+    //Opiskeluosio
+    new site.view.Opiskelu();
+    new site.view.RSSopiskelu();
+    //Asetetaan etusivu näkymään oletuksena, kun sivu avataan
     etu.show();
 });
 
